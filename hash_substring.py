@@ -1,6 +1,6 @@
 # python3
 
-path="/home/runner/work/string-pattern-KristiansPriede221RDB394/string-pattern-KristiansPriede221RDB394/hash_substring.py/tests/06"
+path="/home/runner/work/string-pattern-KristiansPriede221RDB394/string-pattern-KristiansPriede221RDB394/tests/06"
 check=input()
 if check.startswith('I'):
     pattern=input()
@@ -12,6 +12,11 @@ elif check.startswith('F'):
         line=lines.split("\n",2)
         pattern=line[0] 
         text=line[1]
+
+def print_occurrences(output):
+    # this function should control output, it doesn't need any return
+    print(' '.join(map(str, output)))
+
 
 def get_occurrences(pattern, text):
     pat_len=len(pattern)
@@ -46,5 +51,4 @@ def get_occurrences(pattern, text):
 
 # this part launches the functions
 if __name__ == '__main__':
-    arr=(get_occurrences(pattern, text))
-    print(*arr,sep=" ")
+    print_occurrences(get_occurrences(pattern, text))
