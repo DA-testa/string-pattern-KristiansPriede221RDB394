@@ -1,6 +1,6 @@
 # python3
 
-path="C:/Users/Kristians/Desktop/pitons_vs/string-pattern-KristiansPriede221RDB394/tests/06"
+path="/home/runner/work/string-pattern-KristiansPriede221RDB394/string-pattern-KristiansPriede221RDB394/hash_substring.py/tests/06"
 check=input()
 if check.startswith('I'):
     pattern=input()
@@ -41,10 +41,10 @@ def get_occurrences(pattern, text):
         if(txt_len-pat_len>i):
             txt_hash=(a*(txt_hash-ord(text[i])*h)+ord(text[i+pat_len]))%prime_num
             if (txt_hash<0):
-                txt_hash=txt_hash+prime_num
-    return output                      
-
+                txt_hash=txt_hash+prime_num                     
+    return output
 
 # this part launches the functions
 if __name__ == '__main__':
-    print(get_occurrences(pattern, text))
+    arr=(get_occurrences(pattern, text))
+    print(*arr,sep=" ")
